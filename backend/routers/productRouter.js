@@ -27,7 +27,7 @@ productRouter.get(
 			const createdProducts = await Product.insertMany(Data.products);
 			res.send({ createdProducts });
 		} catch (error) {
-			res.send("you have an error on route '/seed'");
+			res.send("you have an error on route '/seed!!'");
 			console.log(error);
 		}
 	})
