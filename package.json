@@ -2,9 +2,10 @@
   "name": "the-store-ecommerce-app",
   "type": "module",
   "version": "1.0.0",
-  "description": "",
+  "description": "Ecommerce website like amazon",
   "main": "index.js",
   "scripts": {
+  "build": "cd frontend && npm install && npm run build",
   "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
   },
     "repository": {
