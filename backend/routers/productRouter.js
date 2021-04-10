@@ -2,6 +2,8 @@ import express from "express";
 import expressAsyncHandler from "express-async-handler";
 import Product from "../models/productModel.js";
 import { isAdmin, isAuth } from "../utils.js";
+import Data from "../Data.js";
+
 const productRouter = express.Router();
 
 productRouter.get(
@@ -17,19 +19,19 @@ productRouter.get(
 	})
 );
 
-// productRouter.get(
-// 	"/seed",
-// 	expressAsyncHandler(async (req, res) => {
-// 		try {
-// 			await Product.remove({});
-// 			const createdProducts = await Product.insertMany(Data.products);
-// 			res.send({ createdProducts });
-// 		} catch (error) {
-// 			res.send("you have an error on route '/seed'");
-// 			console.log(error);
-// 		}
-// 	})
-// );
+productRouter.get(
+	"/seed",
+	expressAsyncHandler(async (req, res) => {
+		try {
+			await Product.remove({});
+			const createdProducts = await Product.insertMany(Data.products);
+			res.send({ createdProducts });
+		} catch (error) {
+			res.send("you have an error on route '/seed'");
+			console.log(error);
+		}
+	})
+);
 
 productRouter.get(
 	"/:id",
