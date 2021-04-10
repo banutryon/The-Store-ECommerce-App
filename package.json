@@ -5,8 +5,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "cd frontend && npm install && npm run build",
-    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
+  "build": "cd frontend && npm install && npm run build",
+  "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
+  },
+    "repository": {
+    "type": "git",
+    "url": "git+https://github.com/banutryon/the-store-ecommerce-app.git"
   },
   "author": "",
   "license": "ISC",
