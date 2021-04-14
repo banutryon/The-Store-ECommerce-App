@@ -145,7 +145,9 @@ a.brand {
 .row.top {
   align-items: flex-start;
 }
-
+.row.start {
+  justify-content: flex-start;
+}
 /* images */
 img {
   border-radius: .5rem;
@@ -157,8 +159,14 @@ img {
 .col-2 {
   flex: 2 1 50rem;
 }
+.col-3 {
+  flex: 3 1 75rem;
+}
 .min-30 {
   min-width: 30rem;
+}
+.pad-1 {
+  padding: 1rem;
 }
 /* Images */
 img.small {
