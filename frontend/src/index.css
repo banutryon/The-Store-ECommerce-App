@@ -325,3 +325,13 @@ img.large {
 .carousel {
   background-color: black;
 }
+.carousel .slide .legend {
+  width: 20% !important;
+  background: #2aa981 !important;
+  color: rgb(1, 1, 1) !important;
+  bottom: 20px !important;
+  margin-left: 0 !important;
+  left: 40% !important;
+  font-size: 20px !important;
+  font-weight: bold;
+}
