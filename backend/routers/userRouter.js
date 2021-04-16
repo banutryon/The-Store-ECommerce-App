@@ -16,26 +16,26 @@ userRouter.get(
 	})
 );
 
-userRouter.get(
-	"/seed",
-	expressAsyncHandler(async (req, res) => {
-		try {
-			const createdUsers = await User.insertMany(Data.users);
-			res.send({ createdUsers });
-		} catch (error) {
-			res.send("you have an error");
-			console.log(error);
-		}
-	})
-);
 // userRouter.get(
 // 	"/seed",
 // 	expressAsyncHandler(async (req, res) => {
-// 		await User.remove({});
-// 		const createdUsers = await User.insertMany(Data.users);
-// 		res.send({ createdUsers });
+// 		try {
+// 			const createdUsers = await User.insertMany(Data.users);
+// 			res.send({ createdUsers });
+// 		} catch (error) {
+// 			res.send("you have an error");
+// 			console.log(error);
+// 		}
 // 	})
 // );
+userRouter.get(
+	"/seed",
+	expressAsyncHandler(async (req, res) => {
+		await User.remove({});
+		const createdUsers = await User.insertMany(Data.users);
+		res.send({ createdUsers });
+	})
+);
 userRouter.post(
 	"/signin",
 	expressAsyncHandler(async (req, res) => {
