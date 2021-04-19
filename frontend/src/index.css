@@ -385,3 +385,7 @@ img.large {
   border-right: none;
   margin-left: .5rem;
 }
+
+.active {
+  font-weight: bold;
+}
