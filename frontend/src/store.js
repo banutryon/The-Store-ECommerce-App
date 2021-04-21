@@ -29,6 +29,7 @@ import {
 	userTopSellerListReducer,
 	userUpdateProfileReducer,
 	userUpdateReducer,
+	userAddressMapReducer,
 } from "./reducers/userReducers";
 const initialState = {
 	userSignin: {
@@ -70,6 +71,7 @@ const reducer = combineReducers({
 	userTopSellersList: userTopSellerListReducer,
 	productCategoryList: productCategoryListReducer,
 	productReviewCreate: productReviewCreateReducer,
+	userAddressMap: userAddressMapReducer,
 });
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
