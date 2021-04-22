@@ -47,6 +47,7 @@ const initialState = {
 		paymentMethod: "PayPal",
 	},
 };
+
 const reducer = combineReducers({
 	productList: productListReducer,
 	productDetails: productDetailsReducer,

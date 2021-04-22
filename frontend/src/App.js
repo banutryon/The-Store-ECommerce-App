@@ -237,7 +237,7 @@ function App() {
 						component={OrderlistScreen}
 					></SellerRoute>
 				</main>
-				<footer>All right reserved</footer>
+				<footer className="row center">All right reserved</footer>
 			</div>
 		</BrowserRouter>
 	);

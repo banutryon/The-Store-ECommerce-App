@@ -4,16 +4,17 @@ import {
 	LoadScript,
 	Marker,
 	StandaloneSearchBox,
-} from "@react-google-maps/api/";
+} from "@react-google-maps/api";
 import LoadingBox from "../components/LoadingBox";
 import Axios from "axios";
 import { USER_ADDRESS_MAP_CONFIRM } from "../constants/userConstants";
 import { useDispatch } from "react-redux";
-const libs = ["places"];
-const defaultLocation = { lat: 47.6062, lng: 122.3321 };
 
-export default function MapScreen() {
-	const [googleApiKey, setGoogleApiKey] = useState(" ");
+const libs = ["places"];
+const defaultLocation = { lat: 47.606, lng: -122.332 };
+
+export default function MapScreen(props) {
+	const [googleApiKey, setGoogleApiKey] = useState("");
 	const [center, setCenter] = useState(defaultLocation);
 	const [location, setLocation] = useState(center);
 
@@ -29,7 +30,6 @@ export default function MapScreen() {
 		};
 		fetch();
 	}, []);
-
 	const onLoad = (map) => {
 		mapRef.current = map;
 	};
@@ -66,6 +66,7 @@ export default function MapScreen() {
 				},
 			});
 			alert("location selected successfully.");
+			props.history.push("/shipping");
 		} else {
 			alert("Please enter you address");
 		}
@@ -88,7 +89,7 @@ export default function MapScreen() {
 	};
 	return googleApiKey ? (
 		<div className="full-container">
-			<LoadScript libraries={libs} googleMapApiKey={googleApiKey}>
+			<LoadScript libraries={libs} googleMapsApiKey={googleApiKey}>
 				<GoogleMap
 					id="sample-map"
 					mapContainerStyle={{ height: "100%", width: "100%" }}

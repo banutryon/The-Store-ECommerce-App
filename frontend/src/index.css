@@ -44,8 +44,9 @@ main {
 
 footer {
   grid-area: footer;
-  background-color: darkgray;
+  background-color: rgb(73, 82, 116);
   color: white;
+
 }
 
 /* common */
