@@ -66,7 +66,7 @@ export default function SellerScreen(props) {
 					<MessageBox variant="danger">{errorProducts}</MessageBox>
 				) : (
 					<>
-						{products.lenght === 0 && <MessageBox>No Product Found</MessageBox>}
+						{products.length === 0 && <MessageBox>No Product Found</MessageBox>}
 						<div className="row center">
 							{products.map((product) => (
 								<Product key={product._id} product={product}></Product>

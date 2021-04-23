@@ -2,20 +2,29 @@ import express from "express";
 import expressAsyncHandler from "express-async-handler";
 import Order from "../models/orderModel.js";
 import { isAuth, isAdmin, isSellerOrAdmin } from "../utils.js";
+
 const orderRouter = express.Router();
 orderRouter.get(
 	"/",
 	isAuth,
 	isSellerOrAdmin,
 	expressAsyncHandler(async (req, res) => {
+		const pageSize = 2;
+		const page = Number(req.query.pageNumber) || 1;
 		const seller = req.query.seller || "";
 		const sellerFilter = seller ? { seller } : {};
 
-		const orders = await Order.find({ ...sellerFilter }).populate(
-			"user",
-			"name"
-		);
-		res.send(orders);
+		const count = await Order.count({
+			...sellerFilter,
+		});
+
+		const orders = await Order.find({ ...sellerFilter })
+			.populate("user", "name")
+
+			.skip(pageSize * (page - 1))
+			.limit(pageSize);
+		res.send({ orders, page, pages: Math.ceil(count / pageSize) });
+		// res.send(orders);
 	})
 );
 

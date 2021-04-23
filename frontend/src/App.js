@@ -187,6 +187,10 @@ function App() {
 					<Route path="/order/:id" component={OrderScreen}></Route>
 					<Route path="/orderhistory" component={OrderHistoryScreen}></Route>
 					<Route
+						path="/orderhistory/pageNumber/:pageNumber"
+						component={OrderHistoryScreen}
+					></Route>
+					<Route
 						path="/search/name/:name?"
 						component={SearchScreen}
 						exact
@@ -202,7 +206,7 @@ function App() {
 						exact
 					></Route>
 					<Route
-						path="/search/category/:category/name/:name/min/:min/max/:max/rating/:rating/order/:order"
+						path="/search/category/:category/name/:name/min/:min/max/:max/rating/:rating/order/:order/pageNumber/:pageNumber"
 						component={SearchScreen}
 						exact
 					></Route>
@@ -218,7 +222,17 @@ function App() {
 						exact
 					></AdminRoute>
 					<AdminRoute
+						path="/productlist/pageNumber/:pageNumber"
+						component={ProductListScreen}
+						exact
+					></AdminRoute>
+					<AdminRoute
 						path="/orderlist"
+						component={OrderlistScreen}
+						exact
+					></AdminRoute>
+					<AdminRoute
+						path="/orderlist/pageNumber/:pageNumber"
 						component={OrderlistScreen}
 						exact
 					></AdminRoute>
@@ -234,6 +248,10 @@ function App() {
 					></SellerRoute>
 					<SellerRoute
 						path="/orderlist/seller"
+						component={OrderlistScreen}
+					></SellerRoute>
+					<SellerRoute
+						path="/orderlist/seller/pageNumber/:pageNumber"
 						component={OrderlistScreen}
 					></SellerRoute>
 				</main>
