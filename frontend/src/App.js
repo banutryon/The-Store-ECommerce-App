@@ -186,10 +186,7 @@ function App() {
 					<Route path="/placeorder" component={PlaceOrderScreen}></Route>
 					<Route path="/order/:id" component={OrderScreen}></Route>
 					<Route path="/orderhistory" component={OrderHistoryScreen}></Route>
-					<Route
-						path="/orderhistory/pageNumber/:pageNumber"
-						component={OrderHistoryScreen}
-					></Route>
+
 					<Route
 						path="/search/name/:name?"
 						component={SearchScreen}
@@ -244,6 +241,10 @@ function App() {
 					<Route path="/" component={HomeScreen} exact></Route>
 					<SellerRoute
 						path="/productlist/seller"
+						component={ProductListScreen}
+					></SellerRoute>
+					<SellerRoute
+						path="/productlist/seller/pageNumber/:pageNumber"
 						component={ProductListScreen}
 					></SellerRoute>
 					<SellerRoute
