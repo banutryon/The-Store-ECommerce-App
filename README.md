@@ -169,21 +169,21 @@ Visit creators Portfolio: http://www.tryon-experiences.com/
     3. Show products on the screen
 
 28. Create full CRUD for Product
-    C. Create Product
+    1. C. Create Product
         1. Build create product api
         2. Create edit screen
         3. Define state
         4. Create fields
-    R. List Orders
+    1. R. List Orders
         1. create order list api
         2. create Order List Screen
         3. Add reducer to store
         4. show products on the screen
-    U. Update Product
+    1. U. Update Product
         1. Define update api
         2. Define product update constant, action and reducer
         3. Use action in Product Edit Screen
-    D. Delete Product
+    1. D. Delete Product
         1.  Create delete api in backend
         2.  Create delete constants, action and reducer
         3.  Use it in product list screen
@@ -205,16 +205,16 @@ Visit creators Portfolio: http://www.tryon-experiences.com/
 
 
 32.Create full CRUD for Users 
-    C. Create Users
+    1. C. Create Users
         1. Step 18 did this step.
-    R. List Users
+    1. R. List Users
         1. Build api for list users
         2. Create UserList Screen
         3. Create order details constant, action and reducer
-    U. Edit User
+    1. U. Edit User
         1. Build api for update users
         2. Create edit screen UI
-    D. Delete Users
+    1. D. Delete Users
         1. build api for delete users
         2. create order details constant, action and reducer
         3. Use action in UserListScreen
