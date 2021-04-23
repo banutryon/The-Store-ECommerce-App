@@ -9,7 +9,7 @@ orderRouter.get(
 	isAuth,
 	isSellerOrAdmin,
 	expressAsyncHandler(async (req, res) => {
-		const pageSize = 2;
+		const pageSize = 10;
 		const page = Number(req.query.pageNumber) || 1;
 		const seller = req.query.seller || "";
 		const sellerFilter = seller ? { seller } : {};
