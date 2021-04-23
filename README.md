@@ -205,16 +205,16 @@ Visit creators Portfolio: http://www.tryon-experiences.com/
 
 
 32.Create full CRUD for Users 
-    1. C. Create Users
+    2. C. Create Users
         1. Step 18 did this step.
-    1. R. List Users
+    2. R. List Users
         1. Build api for list users
         2. Create UserList Screen
         3. Create order details constant, action and reducer
-    1. U. Edit User
+    2. U. Edit User
         1. Build api for update users
         2. Create edit screen UI
-    1. D. Delete Users
+    2. D. Delete Users
         1. build api for delete users
         2. create order details constant, action and reducer
         3. Use action in UserListScreen
