@@ -430,3 +430,31 @@ img.large {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Dashboard */
+
+.summary > li {
+  border: .1rem #c0c0c0 solid;
+  margin: 2rem;
+  border-radius: .5rem;
+  flex: 1 1 20rem;
+}
+.summary-title {
+  font-size: 2rem;
+  padding: 1rem;
+}
+.summary-body {
+  font-size: 4rem;
+  padding: 1rem;
+  text-align: center;
+
+}
+.summary-title.color1 {
+  background-color: #e3c8c8;
+}
+.summary-title.color2 {
+  background-color: #c4e1c4;
+}
+.summary-title.color3 {
+  background-color: #bdbdda;
+}

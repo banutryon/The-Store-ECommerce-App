@@ -290,4 +290,4 @@ Visit creators Portfolio: http://www.tryon-experiences.com/
     8. Commit and push
 
 Lastly I want to shout out to Basir. 
-I used his walkthrough in building out this app. He was able to teach me many new tips and tricks in React and has allowed me to build my first fully built out applaction. His Git repo is https://github.com/basir/amazona. 
+I used his walkthrough in building out this app. He was able to teach me many new tips and tricks in React and has allowed me to build my first fully built out application. His Git repo is https://github.com/basir/amazona. 
