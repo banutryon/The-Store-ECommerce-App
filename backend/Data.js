@@ -26,7 +26,7 @@ const Data = {
 	products: [
 		{
 			name: "Playstation 5 Console",
-			seller: "",
+			seller: "123",
 			category: "gaming",
 			image: "/images/ps5Game8.jpg",
 			price: 499,
