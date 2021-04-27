@@ -153,7 +153,7 @@ export default function ProductScreen(props) {
 							</div>
 						</div>
 					</div>
-					{/* <div>
+					<div>
 						<h2 id="reviews">Reviews</h2>
 						{product.reviews.length === 0 && (
 							<MessageBox>There is no Reviews</MessageBox>
@@ -218,7 +218,7 @@ export default function ProductScreen(props) {
 								)}
 							</li>
 						</ul>
-					</div> */}
+					</div>
 				</div>
 			)}
 		</div>
