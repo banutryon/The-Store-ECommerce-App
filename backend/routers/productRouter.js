@@ -123,7 +123,7 @@ productRouter.post(
 		const product = new Product({
 			name: "sample name" + Date.now(),
 			seller: req.user._id,
-			image: "/images/addImage.png",
+			image: "/images/addImage.jpeg",
 			price: 0,
 			category: "sample category",
 			brand: "sample brand",
