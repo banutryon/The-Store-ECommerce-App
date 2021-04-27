@@ -59,7 +59,7 @@ function App() {
 							className="open-sidebar"
 							onClick={() => setSideBarIsOpen(true)}
 						>
-							<icon className="fa fa-bars"></icon>
+							<i className="fa fa-bars"></i>
 						</button>
 						<Link className="brand" to="/">
 							The Store
