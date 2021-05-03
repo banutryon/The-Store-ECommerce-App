@@ -29,8 +29,8 @@ uploadRouter.post("/", isAuth, upload.single("image"), (req, res) => {
 });
 
 aws.config.update({
-	accessKeyId: config.accessKeyId,
-	secretAccessKey: config.secretAccessKey,
+	accessKeyId: config.AWS_ACCESS_KEY_ID,
+	secretAccessKey: config.AWS_SECRET_ACCESS_KE,
 });
 
 const s3 = new aws.S3();
