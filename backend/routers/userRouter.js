@@ -23,7 +23,7 @@ userRouter.get(
 // 			const createdUsers = await User.insertMany(Data.users);
 // 			res.send({ createdUsers });
 // 		} catch (error) {
-// 			res.send("you have an error");
+// 			res.send("you have an error fix it");
 // 			console.log(error);
 // 		}
 // 	})

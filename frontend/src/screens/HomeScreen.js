@@ -25,7 +25,7 @@ export default function HomeScreen() {
 		dispatch(listTopSellers());
 	}, [dispatch]);
 	return (
-		<div>
+		<div >
 			<h2>Top Sellers</h2>
 			{loadingSellers ? (
 				<LoadingBox></LoadingBox>

@@ -62,9 +62,13 @@ function App() {
 							<i className="fa fa-bars"></i>
 						</button>
 						<Link className="brand" to="/">
-							The Store
+							
+							<img className="canoe" src='images/canoe1.png' alt='img'/>
+							Banu's Canoes
 						</Link>
+						
 					</div>
+					
 					<div>
 						<Route
 							render={({ history }) => (
@@ -72,7 +76,7 @@ function App() {
 							)}
 						></Route>
 					</div>
-					<div>
+					<div className="navList">
 						<Link to="/cart">
 							Cart
 							{cartItems.length > 0 && (
@@ -105,7 +109,7 @@ function App() {
 						{userInfo && userInfo.isSeller && (
 							<div className="dropdown">
 								<Link to="#admin">
-									Seller<i className=" fa fa-caret-down"></i>
+									Seller <i className=" fa fa-caret-down"></i>
 								</Link>
 								<ul className="dropdown-content">
 									<>
@@ -120,7 +124,7 @@ function App() {
 						{userInfo && userInfo.isAdmin && (
 							<div className="dropdown">
 								<Link to="#admin">
-									Admin<i className=" fa fa-caret-down"></i>
+									Admin <i className=" fa fa-caret-down"></i>
 								</Link>
 								<ul className="dropdown-content">
 									<li>
