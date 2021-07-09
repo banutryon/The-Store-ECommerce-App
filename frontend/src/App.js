@@ -52,18 +52,13 @@ function App() {
 	return (
 		<BrowserRouter>
 			<div className="grid-container">
-				<header className="row">
-					<div>
-						<button
-							type="button"
-							className="open-sidebar"
-							onClick={() => setSideBarIsOpen(true)}
-						>
-							<i className="fa fa-bars"></i>
-						</button>
-						<Link className="brand" to="/">
-							
+				<header >
+					<div className="row row-top">
+					<div className="navTop-row">
+						<Link  to="/">
 							<img className="canoe" src='images/canoe1.png' alt='img'/>
+						</Link>
+						<Link className="brand" to="/">	
 							Banu's Canoes
 						</Link>
 						
@@ -76,13 +71,21 @@ function App() {
 							)}
 						></Route>
 					</div>
-					<div className="navList">
-						<Link to="/cart">
+					<Link className="cart" to="/cart">
 							Cart
 							{cartItems.length > 0 && (
 								<span className="badge">{cartItems.length}</span>
 							)}
 						</Link>
+						</div>
+					<div className="navList row">
+						<button
+							type="button"
+							className="open-sidebar"
+							onClick={() => setSideBarIsOpen(true)}
+						>
+							<i className="fa fa-bars"></i>
+						</button>
 						{userInfo ? (
 							<div className="dropdown">
 								<Link to="#">

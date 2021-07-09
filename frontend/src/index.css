@@ -16,6 +16,13 @@ body {
 
 #root {
   height: 100%;
+  --clr-primary: rgb(2, 111, 157);
+  --clr-primary-100: rgb(2, 90, 128);
+  --clr-secondary: #c87c2c;
+  --clr-gray: #dad9d9;
+  --clr-offwhite: rgb(237, 241, 255);
+  --clr-boxshadow: rgba(113, 112, 112, 0.667);
+
 }
 
 /* Layout */
@@ -33,19 +40,20 @@ body {
 
 header {
   grid-area: header;
-  background-color: rgb(2, 111, 157);
-  height: 50px;
-  padding: 1rem .5rem;
+  background-color: var(--clr-primary);
+  padding: 1rem 0;
+  /* height: 40px; */
 }
 
 main {
   grid-area: main;
+  margin-top: 4rem;
   padding: 1rem;
 }
 
 footer {
   grid-area: footer;
-  background-color: rgb(2, 111, 157);
+  background-color: var(--clr-primary);
   color: white;
 
 }
@@ -68,7 +76,7 @@ a {
 }
 
 a:hover {
-  color: rgb(179, 99, 24)
+  color: var(--clr-secondary);
 }
 
 ul {
@@ -87,7 +95,7 @@ textarea,
 input {
   padding: 1rem;
   border-radius: .5rem;
-  border: 0.1rem #dad9d9 solid;
+  border: 0.1rem var(--clr-gray) solid;
   font-size: 1.6rem;
   font-family: Helvetica,
     Arial,
@@ -98,7 +106,7 @@ input {
 }
 
 button {
-  background-color: #dcdcdc;
+  background-color: var(--clr-gray);
   cursor: pointer;
 }
 
@@ -106,11 +114,11 @@ button:hover,
 select:hover,
 textarea:hover,
 input:hover {
-  border: .1rem #404040 solid;
+  border: .1rem --clr-boxshadow solid;
 }
 
 button.primary {
-  background-color: #c87c2c;
+  background-color: var(--clr-secondary);
 }
 
 button.block {
@@ -124,43 +132,36 @@ button.small {
 /* Header */
 header a {
   color: white;
-  margin: 0 auto;
-  padding: 3.5vw;
+  margin: 0 .5rem;
 }
 
 .canoe {
-  position: absolute;
-  left: 12vw;
-  width: 35px;
-  /* background-color: rgb(255, 255, 255); */
+  width: 25px;
 }
 
 a.brand {
   color: white;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: bold;
-  margin-left: 12vw;
-  padding: 0;
+  display: block;
+  margin: auto .2rem;
 }
 
 .badge {
-  background-color: #c1c1c1;
-  color: white;
+  background-color: var(--clr-gray);
+  color: var(--clr-primary);
   border-radius: 50%;
-  padding: .2rem .7rem;
+  padding: .2rem .8rem;
+  margin: .5rem;
   font-size: 1.6rem;
-  margin-left: .5rem;
-
-
 }
-
-
 
 .row {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  margin: 0 .5rem;
 }
 
 .row.center {
@@ -178,45 +179,41 @@ a.brand {
 
 }
 
-.navList {
-  margin: 10px auto 0 auto;
+.navTop-row {
+  display: flex;
 }
 
-
+.navList {
+  font-size: 1.2rem;
+  height: 3rem;
+  margin: 0.5rem auto 0 auto;
+  justify-content: left;
+  background-color: var(--clr-primary-100);
+}
 
 /* Search */
-
-.search {
-  box-shadow: 2px 2px 5px .5px rgba(255, 255, 255, 0.2);
-  margin-right: 10px;
-}
-
 
 .search button {
   border-radius: 0 .5rem .5rem 0;
   border-right: none;
-  height: 25px;
-  width: 30px;
+  height: 23.5px;
+  width: 2rem;
   border: none;
-
-
   /* margin-right: .5rem; */
 }
 
 .search input {
   border-radius: .5rem 0 0 .5rem;
   border-right: none;
-  margin: 0rem;
-  width: 15vw;
-  height: 3px;
+  max-width: 20vw;
+  height: 0.1875rem;
 
 }
 
 .fa-search {
   font-size: 1.6rem;
   position: absolute;
-  margin: -10px 0 0 -8px;
-
+  margin: -10px 0 0 -7px;
 }
 
 
@@ -232,20 +229,21 @@ a.brand {
 .carousel {
   max-width: 50vw !important;
   margin: 0 auto !important;
-  box-shadow: 2px 2px 10px .5px rgb(133, 133, 133);
-  border-radius: .5rem;
+  box-shadow: 2px 2px 10px .5px var(--clr-boxshadow);
+  border-radius: 1rem;
 }
 
 .carousel .slide .legend {
   width: 60% !important;
-  height: 3rem !important;
+  height: 20% !important;
   background: #1281a9ae !important;
-  box-shadow: 1px 3px 5px .5px rgb(38, 38, 38);
+  box-shadow: 1px 3px 5px .5px var(--clr-boxshadow);
   color: rgb(9, 9, 9) !important;
   top: 0 !important;
-  margin: 10px auto !important;
+  margin: 1rem auto !important;
   left: 20% !important;
-  font-size: 10px !important;
+  font-size: clamp(.5rem, 3vw, 3rem) !important;
+  /* font-size: 0.625rem !important; */
   font-weight: bold;
 
 }
@@ -256,7 +254,7 @@ aside {
   position: fixed;
   width: 40vw;
   height: 100%;
-  background-color: whitesmoke;
+  background-color: var(--clr-gray);
   z-index: 100;
   transform: translateX(-30rem);
   transition: all .5s;
@@ -267,21 +265,21 @@ aside.open {
 }
 
 aside.open a {
-  color: rgb(0, 103, 147);
+  color: var(--clr-primary);
 }
 
 aside.open a:hover {
-  color: #c87c2c;
+  color: var(--clr-secondary);
 }
 
 button.open-sidebar {
-  font-size: 2rem;
+  font-size: 1.4rem;
   padding: .2rem .5rem;
   margin: 0 .5rem;
   background-color: none;
   color: white;
   cursor: pointer;
-  background-color: #c87c2c;
+  background-color: var(--clr-secondary);
   border: none;
   box-shadow: 2px 2px 5px .5px rgba(255, 255, 255, 0.2);
   ;
@@ -289,7 +287,7 @@ button.open-sidebar {
 
 button.open-sidebar:hover {
   background-color: white;
-  color: rgb(179, 99, 24);
+  color: var(--clr-secondary);
 }
 
 aside ul {
@@ -340,10 +338,10 @@ img.small {
 
 img.medium {
   max-width: 15rem;
-  width: 95%;
+  width: 100%;
   height: 12rem;
   display: block;
-  margin: 2px auto 0 auto;
+  margin: 0 auto;
   /* height: 100%; */
 }
 
@@ -355,10 +353,12 @@ img.large {
 
 /* card */
 .card {
+  /* width: 25vw; */
   background-color: #f2f2f2;
   box-shadow: 2px 2px 5px 1px rgb(195, 195, 195);
   border-radius: .5rem;
   margin: 1rem;
+
 
 }
 
@@ -387,7 +387,7 @@ img.large {
 
 /* rating */
 .rating span {
-  font-size: 1rem;
+  font-size: clamp(.5rem, 2vw, 1.6rem);
   color: #f0c040;
   margin: 0.1rem;
 }
@@ -462,13 +462,12 @@ img.large {
 .dropdown-content {
   position: absolute;
   display: none;
-  right: 0;
+  right: 10;
   min-width: 12rem;
   padding: 1rem;
   z-index: 1;
   background-color: #404040;
-  margin: 0;
-  margin-top: 0.4rem;
+  margin: 0.4rem 0 0 0;
   border-radius: 0.5rem;
 }
 
@@ -600,99 +599,103 @@ img.large {
 /* ========================================= */
 /* ========================================= */
 /* ========================================= */
-@media only screen and (min-width: 700px) {
 
+@media (max-width: 900px) and (min-width: 500px) {
+  .search input {
+    width: 40vw;
+    max-width: 800px;
+  }
+}
+
+@media (min-width: 900px) {
+  main {
+    margin-top: 8rem;
+  }
 
   /* common */
   h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     padding: 1rem 0;
+
   }
 
   h2 {
-    font-size: 1.6rem;
-    padding: 1rem 0;
-  }
-
-  ul {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-  }
-
-  li {
-    margin-top: 1rem;
-  }
-
-  button,
-  select,
-  textarea,
-  input {
-    padding: 1rem;
-    font-size: 1.6rem;
+    font-size: 2rem;
+    padding: .5rem 0;
   }
 
   /* Header */
+  header {
+    height: 60px;
+  }
+
   header a {
-    padding: 1.5rem;
+    padding: .5rem;
+  }
+
+  .cart {
+    margin-right: 1rem;
+    font-size: 3rem;
   }
 
   .canoe {
-    /* position: relative; */
-    margin-left: -100px;
     width: 50px;
-
   }
 
   a.brand {
-    font-size: 3rem;
-    margin-left: 7vw;
-
+    font-size: clamp(2rem, 3vw, 4rem);
+    margin: auto .2rem;
   }
 
   .badge {
-
-    padding: .2rem .7rem;
-    font-size: 1.4rem;
-    margin-left: .5rem;
+    padding: 0rem 1rem;
+    font-size: 2.5rem;
   }
 
   .navList {
-    margin: 10px 0;
+    font-size: 2rem;
+    height: 4.5rem;
+  }
+
+  /* Search */
+  .search button {
+    height: 40px;
+    width: 4rem;
+  }
+
+  .search input {
+    height: 100%;
+    width: 45vw;
+    max-width: 900px;
+  }
+
+  .fa-search {
+    font-size: 2rem;
+    margin: -11px 0 0 -10px;
   }
 
   /* Carousel */
 
   .carousel .slide img {
-    max-width: 30vw !important;
+    width: 50vw;
+    max-width: 40rem !important;
   }
 
   .carousel {
-    max-width: 30vw !important;
+    width: 50vw !important;
+    max-width: 40rem !important;
   }
 
   .carousel .slide .legend {
-    width: 40% !important;
+    width: 60% !important;
     height: 5rem !important;
     top: 0 !important;
-    margin: 10px auto !important;
-    left: 30% !important;
+    left: 20% !important;
     font-size: 22px !important;
     font-weight: bold;
 
 
   }
-
-  /* Search */
-  .search button {
-    margin-right: 0;
-    height: 40px;
-  }
-
-  .search input {
-    height: 100%;
-  }
-
 
   /* Aside */
 
@@ -707,7 +710,7 @@ img.large {
   }
 
   button.open-sidebar {
-    font-size: 3rem;
+    font-size: 2.6rem;
 
   }
 
@@ -715,115 +718,55 @@ img.large {
     padding: .5rem 1rem;
   }
 
-  /* images */
-  img {
-    border-radius: .5rem;
-  }
-
-  .col-1 {
-    flex: 1 1 10rem;
-  }
-
-  .col-2 {
-    flex: 2 1 50rem;
-  }
-
-  .col-3 {
-    flex: 3 1 75rem;
-  }
-
-  .min-30 {
-    min-width: 30rem;
-  }
-
-  .pad-1 {
-    padding: 1rem;
-  }
 
   /* Images */
   img.small {
     max-width: 5rem;
-    width: 100%;
   }
 
   img.medium {
-    max-width: 29rem;
-    width: 100%;
-    height: 31rem;
-    /* height: 100%; */
+    max-width: 40rem;
+    height: 30vh;
+    max-height: 25rem;
   }
 
   img.large {
     max-width: 70rem;
-    width: 100%;
-
   }
 
   /* card */
   .card {
-    border: 0.1rem #828282 solid;
-    background-color: #ededed;
-    border-radius: .5rem;
-    margin: 1rem;
+    max-width: 20vw;
+    width: 100%;
+  }
 
+  .card h2 {
+    font-size: clamp(1rem, 1.5vw, 2rem);
+  }
+
+  .card a {
+    font-size: clamp(1rem, 1.5vw, 1.6rem)
   }
 
   .card-body {
-    padding: 1rem;
-  }
-
-  .card-body>* {
-    margin-bottom: .5rem;
-
+    padding: 1.5rem;
   }
 
   .price {
-    font-size: 2rem;
+    font-size: clamp(1rem, 1.5vw, 2.5rem)
   }
 
   /* rating */
   .rating span {
     color: #f0c040;
     margin: 0.1rem;
+
   }
 
   .rating span:last-child {
     color: #545454;
   }
 
-  /* Alert */
-  .loading {
-    display: block !important;
-  }
-
-  .success {
-    color: #20a020;
-  }
-
-  .error {
-    color: #a02020;
-  }
-
-  .alert {
-    padding: 1rem;
-    border: .1rem solid transpartent;
-    border-radius: .5rem;
-  }
-
-  .alert-info {
-    color: #2020a0;
-    background-color: #e0e0ff;
-  }
-
-  .alert-danger {
-    color: #a02020;
-    background-color: #e0d4d4;
-  }
-
-  .alert-success {
-    color: #20a020;
-    background-color: #d4ead2;
-  }
 
   /* Form */
 
@@ -857,7 +800,7 @@ img.large {
   .dropdown-content {
     position: absolute;
     display: none;
-    right: 0;
+    right: 10;
     min-width: 12rem;
     padding: 1rem;
     z-index: 1;
