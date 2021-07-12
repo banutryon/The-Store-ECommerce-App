@@ -334,7 +334,7 @@ img {
 
 /* Images */
 img.small {
-  max-width: 10rem;
+  min-width: 10rem;
   width: 100%;
 
 }
@@ -502,7 +502,7 @@ img.large {
 /* Table */
 
 .table {
-  /* width: 100%; */
+  width: 100%;
   border-collapse: collapse;
   margin-top: 10px;
 }
@@ -510,7 +510,6 @@ img.large {
 .mobileTable {
   width: 90vw;
   overflow-x: auto;
-
 }
 
 
@@ -527,10 +526,16 @@ img.large {
 }
 
 .table button {
-  margin: 0.02rem;
+  margin: 0.3rem;
 }
 
-
+.infoId {
+  width: 120px;
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
 
 /* Maps */
@@ -630,8 +635,6 @@ img.large {
   main {
     margin-top: 8rem;
   }
-
-
 
   /* Header */
   header {
@@ -741,7 +744,6 @@ img.large {
 
   /* card */
 
-
   .card h2 {
     font-size: clamp(1rem, 1.5vw, 2rem);
   }
@@ -796,29 +798,15 @@ img.large {
   }
 
 
-  /* Checkout Steps */
-  .checkout-steps>div {
-    border-top: .3rem #c0c0c0 solid;
-    padding: 1rem;
-  }
-
   /* Table */
 
-  .table {
+  .table button {
+    margin: 0.5rem;
+  }
+
+  .mobileTable {
     width: 100%;
   }
-
-  .table td,
-  .table th {
-    text-align: left;
-    border: 0.1rem solid #e4e4e4;
-    padding: .5rem;
-  }
-
-  .table button {
-    margin: 0.02rem;
-  }
-
 
 
 

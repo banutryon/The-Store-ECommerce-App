@@ -39,6 +39,7 @@ export default function UserListScreen(props) {
 			) : error ? (
 				<MessageBox variant="danger">{error}</MessageBox>
 			) : (
+				<div className="mobileTable">
 				<table className="table">
 					<thead>
 						<tr>
@@ -53,7 +54,7 @@ export default function UserListScreen(props) {
 					<tbody>
 						{users.map((user) => (
 							<tr key={user._id}>
-								<td>{user._id}</td>
+								<td className="infoId">{user._id}</td>
 								<td>{user.name}</td>
 								<td>{user.email}</td>
 								<td>{user.isSeller ? "Yes" : "No"}</td>
@@ -78,6 +79,7 @@ export default function UserListScreen(props) {
 						))}
 					</tbody>
 				</table>
+				</div>
 			)}
 		</div>
 	);

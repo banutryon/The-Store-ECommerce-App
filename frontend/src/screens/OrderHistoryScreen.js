@@ -20,6 +20,7 @@ export default function OrderHistoryScreen(props) {
 				<MessageBox variant="danger">{error}</MessageBox>
 			) : (
 				<>
+				<div className="mobileTable">
 					<table className="table">
 						<thead>
 							<tr>
@@ -34,7 +35,7 @@ export default function OrderHistoryScreen(props) {
 						<tbody>
 							{orders.map((order) => (
 								<tr key={order._id}>
-									<td>{order._id}</td>
+									<td className="infoId">{order._id}</td>
 									<td>{order.createdAt.substring(0, 10)}</td>
 									<td>{order.totalPrice}</td>
 									<td>{order.isPaid ? order.paidAt.substring(0, 10) : "No"}</td>
@@ -58,6 +59,7 @@ export default function OrderHistoryScreen(props) {
 							))}
 						</tbody>
 					</table>
+					</div>
 				</>
 			)}
 		</div>
