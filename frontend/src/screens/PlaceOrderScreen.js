@@ -90,7 +90,7 @@ export default function PlaceOrderScreen(props) {
 					</ul>
 				</div>
 				<div className="col-1">
-					<div className="card card-body">
+					<div className="card card-body orderTotal">
 						<ul>
 							<li>
 								<h2>Order Summary</h2>

@@ -26,6 +26,7 @@ export default function CartScreen(props) {
 		props.history.push("/signin?redirect=shipping");
 	};
 	return (
+		<div>
 		<div className="row top">
 			<div className="col-2">
 				<h1>Shopping Cart</h1>
@@ -51,6 +52,7 @@ export default function CartScreen(props) {
 									</div>
 									<div>
 										<select
+											className="qty"
 											value={item.qty}
 											onChange={(e) =>
 												dispatch(
@@ -80,8 +82,9 @@ export default function CartScreen(props) {
 					</ul>
 				)}
 			</div>
+			</div>
 			<div className="col-1">
-				<div className="card card-body">
+				<div className="card card-body total">
 					<ul>
 						<li>
 							<h2>
@@ -102,6 +105,7 @@ export default function CartScreen(props) {
 					</ul>
 				</div>
 			</div>
+		
 		</div>
 	);
 }

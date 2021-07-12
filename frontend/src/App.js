@@ -56,7 +56,7 @@ function App() {
 					<div className="row row-top">
 					<div className="navTop-row">
 						<Link  to="/">
-							<img className="canoe" src='images/canoe1.png' alt='img'/>
+							{/* <img className="canoe" src='images/canoe1.png' alt='img'/> */}
 						</Link>
 						<Link className="brand" to="/">	
 							Banu's Canoes
