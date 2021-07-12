@@ -29,6 +29,7 @@ import LoadingBox from "./components/LoadingBox";
 import MessageBox from "./components/MessageBox";
 import MapScreen from "./screens/MapScreen";
 import DashboardScreen from "./screens/DashboardScreen";
+import logo from "./canoe1.png"
 
 function App() {
 	const cart = useSelector((state) => state.cart);
@@ -56,7 +57,7 @@ function App() {
 					<div className="row row-top">
 					<div className="navTop-row">
 						<Link  to="/">
-							{/* <img className="canoe" src='images/canoe1.png' alt='img'/> */}
+							<img className="canoe" src={logo} alt='img'/>
 						</Link>
 						<Link className="brand" to="/">	
 							Banu's Canoes
