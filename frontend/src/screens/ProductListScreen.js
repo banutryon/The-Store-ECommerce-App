@@ -84,23 +84,25 @@ export default function ProductListScreen(props) {
 			) : error ? (
 				<MessageBox variant="danger">{error}</MessageBox>
 			) : (
-				<>
+				<>	
+					<div className="mobileTable">
 					<table className="table">
 						<thead>
 							<tr>
-								<th>ID</th>
+								
 								<th>Image</th>
 								<th>NAME</th>
 								<th>PRICE</th>
 								<th>CATEGORY</th>
 								<th>BRAND</th>
+								<th>ID</th>
 								<th>ACTIONS</th>
 							</tr>
 						</thead>
 						<tbody>
 							{products.map((product) => (
 								<tr key={product._id}>
-									<td>{product._id}</td>
+									
 									<img
 										src={product.image}
 										alt={product.name}
@@ -110,6 +112,7 @@ export default function ProductListScreen(props) {
 									<td>{product.price}</td>
 									<td>{product.category}</td>
 									<td>{product.brand}</td>
+									<td>{product._id}</td>
 									<td>
 										<button
 											type="button"
@@ -132,6 +135,7 @@ export default function ProductListScreen(props) {
 							))}
 						</tbody>
 					</table>
+					</div>
 					<div className="row center pagination">
 						{[...Array(pages).keys()].map((x) => (
 							<Link
