@@ -82,8 +82,8 @@ export default function ProductScreen(props) {
 							</ul>
 						</div>
 						<div className="col-1">
-							<div className="card card-body">
-								<ul>
+							<div className="seller-card card-body">
+								<ul className="seller-box">
 									<li>
 										Seller{" "}
 										<h2>
