@@ -46,7 +46,7 @@ header {
 
 main {
   grid-area: main;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   padding: 1.5rem;
   background-color: var(--clr-offwhite);
 }
@@ -680,7 +680,7 @@ img.large {
 
 @media (min-width: 900px) {
   main {
-    margin-top: 6.5rem;
+    margin-top: 4.5rem;
     padding: 2rem 4rem;
   }
 
