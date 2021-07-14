@@ -15,9 +15,9 @@ body {
 
 #root {
   height: 100%;
-  --clr-primary: rgb(2, 111, 157);
-  --clr-primary-100: rgb(2, 90, 128);
-  --clr-secondary: #c87c2c;
+  --clr-primary: rgb(61, 90, 84);
+  --clr-primary-100: rgb(95, 121, 126);
+  --clr-secondary: #a1c51f;
   --clr-gray: #dad9d9;
   --clr-offwhite: rgb(237, 241, 255);
   --clr-boxshadow: rgba(113, 112, 112, 0.667);
@@ -69,12 +69,13 @@ h1 {
 h2 {
   font-size: clamp(1.2rem, 2vw, 2rem) !important;
   padding: .5rem 0;
+
 }
 
 
 a {
   text-decoration: none;
-
+  color: var(--clr-primary);
 }
 
 a:hover {
