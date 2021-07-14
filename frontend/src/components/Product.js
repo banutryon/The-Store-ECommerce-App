@@ -13,7 +13,7 @@ export default function Product(props) {
 			</Link>
 			<div className="card-body">
 				<Link to={`/product/${product._id}`}>
-					<h2>{product.name.substring(0,11)}</h2>
+					<h2>{product.name.substring(0,15)}</h2>
 				</Link>
 				<Rating
 					rating={product.rating}
