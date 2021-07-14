@@ -46,7 +46,7 @@ header {
 
 main {
   grid-area: main;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
   padding: 1.5rem;
   background-color: var(--clr-offwhite);
 }
@@ -471,7 +471,7 @@ img.large {
 }
 
 .alert-info {
-  color: #2020a0;
+  color: var(--clr-primary);
   background-color: #e0e0ff;
 }
 
