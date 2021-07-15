@@ -794,8 +794,8 @@ img.large {
   }
 
   img.medium {
-    max-width: 30rem;
-    height: 300px;
+    max-width: 20rem;
+    height: 20rem;
     margin-top: 5px;
   }
 
