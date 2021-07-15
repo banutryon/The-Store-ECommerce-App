@@ -147,7 +147,7 @@ header a {
 
 a.brand {
   color: white;
-  font-size: clamp(2rem, 2vw, 6rem);
+  font-size: clamp(1.2rem, 3vw, 4rem);
   font-weight: bold;
   display: block;
   margin: auto .2rem;
@@ -177,6 +177,7 @@ a.brand {
 }
 
 .row.top {
+
   align-items: flex-start;
 
 }
@@ -266,7 +267,7 @@ a.brand {
 
 aside {
   position: fixed;
-  width: 40vw;
+  width: 35vw;
   height: 100%;
   background-color: var(--clr-gray);
   z-index: 100;
@@ -326,8 +327,8 @@ img {
 
 .col-1 {
   flex: 1 1 5rem;
-  min-width: 30rem;
-
+  min-width: 50rem;
+  max-width: 50rem;
 }
 
 .col-2 {
@@ -375,9 +376,10 @@ img.large {
 
   padding: .5rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 90vw;
   background-color: white;
+
 }
 
 .border {
@@ -386,7 +388,6 @@ img.large {
 }
 
 .card-body {
-
   min-width: 120px;
 }
 
@@ -401,14 +402,21 @@ img.large {
 }
 
 .total {
-  width: 100%;
-  max-width: 60vw;
+  width: 60vw;
+  max-width: 300px;
   float: right;
+  margin-top: 10px;
 }
 
-.orderTotal {
-  min-width: 300px;
+.order-summary {
+  margin-top: 10px;
 }
+
+.order-total {
+  width: 100%;
+}
+
+
 
 .price {
   font-size: 1.5rem;
@@ -833,11 +841,8 @@ img.large {
 
   }
 
-
-
-  .total {
-
-    max-width: 40vw;
+  .order-summary {
+    margin-top: 10px;
   }
 
   .price {
