@@ -795,7 +795,7 @@ img.large {
 
   img.medium {
     max-width: 30rem;
-    height: 320px;
+    height: 280px;
     margin-top: 5px;
   }
 
@@ -819,6 +819,7 @@ img.large {
   /* card */
   .card {
     width: 28vw;
+    max-width: 280px;
     flex-direction: column;
     box-shadow: 1px 8px 15px -10px rgba(0, 0, 0, 0.178);
     margin: .1rem;
