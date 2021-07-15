@@ -36,7 +36,7 @@ export default function PlaceOrderScreen(props) {
 		<div>
 			<CheckoutSteps step1 step2 step3 step4></CheckoutSteps>
 			<div className="row top">
-				<div className="col-2">
+				<div className="col-2 ">
 					<ul>
 						<li>
 							<div className="card card-body">
@@ -89,7 +89,7 @@ export default function PlaceOrderScreen(props) {
 						</li>
 					</ul>
 				</div>
-				<div className="col-1">
+				<div className="col-1 col-1-1">
 					<div className="card card-body order-summary">
 						<ul className="order-total">
 							<li>
